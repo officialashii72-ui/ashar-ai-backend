@@ -9,6 +9,11 @@ import AdminDashboard from './pages/AdminDashboard';
 import AdminRoute from './components/AdminRoute';
 import AdminProjectsPage from './pages/AdminProjectsPage';
 import AdminProjectEditPage from './pages/AdminProjectEditPage';
+import AdminServicesPage from './pages/AdminServicesPage';
+import AdminServiceEditPage from './pages/AdminServiceEditPage';
+import AdminBlogPage from './pages/AdminBlogPage';
+import AdminBlogEditPage from './pages/AdminBlogEditPage';
+import AdminMessagesPage from './pages/AdminMessagesPage';
 
 import CaseStudiesPage from './pages/CaseStudiesPage';
 import BlogPage from './pages/BlogPage';
@@ -34,6 +39,11 @@ const App: React.FC = () => {
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
           <Route path="/admin/projects" element={<AdminProjectsPage />} />
           <Route path="/admin/projects/:id/edit" element={<AdminProjectEditPage />} />
+          <Route path="/admin/services" element={<AdminServicesPage />} />
+          <Route path="/admin/services/:id/edit" element={<AdminServiceEditPage />} />
+          <Route path="/admin/blog" element={<AdminBlogPage />} />
+          <Route path="/admin/blog/:id/edit" element={<AdminBlogEditPage />} />
+          <Route path="/admin/messages" element={<AdminMessagesPage />} />
         </Route>
       </Routes>
     </Router>

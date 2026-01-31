@@ -30,14 +30,18 @@ const AdminDashboard: React.FC = () => {
                         <FileText size={20} className="mr-3" />
                         Projects
                     </Link>
-                    <a href="#" className="flex items-center px-6 py-3 text-indigo-300 hover:bg-indigo-800 hover:text-white transition-colors">
+                    <Link to="/admin/messages" className={`flex items-center px-6 py-3 ${location.pathname.includes('/admin/messages') ? 'bg-indigo-800 text-white' : 'text-indigo-300 hover:bg-indigo-800 hover:text-white'} transition-colors`}>
                         <Users size={20} className="mr-3" />
                         Messages
-                    </a>
-                    <a href="#" className="flex items-center px-6 py-3 text-indigo-300 hover:bg-indigo-800 hover:text-white transition-colors">
-                        <Settings size={20} className="mr-3" />
-                        Settings
-                    </a>
+                    </Link>
+                    <Link to="/admin/services" className={`flex items-center px-6 py-3 ${location.pathname.includes('/admin/services') ? 'bg-indigo-800 text-white' : 'text-indigo-300 hover:bg-indigo-800 hover:text-white'} transition-colors`}>
+                        <Settings size={20} className="mr-3" /> {/* Using Settings icon for Services for now/ or maybe Layers/Cpu */}
+                        Services
+                    </Link>
+                    <Link to="/admin/blog" className={`flex items-center px-6 py-3 ${location.pathname.includes('/admin/blog') ? 'bg-indigo-800 text-white' : 'text-indigo-300 hover:bg-indigo-800 hover:text-white'} transition-colors`}>
+                        <FileText size={20} className="mr-3" />
+                        Blog
+                    </Link>
                 </nav>
                 <div className="absolute bottom-0 w-64 p-6">
                     <button
