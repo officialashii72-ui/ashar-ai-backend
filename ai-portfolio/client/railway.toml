@@ -6,8 +6,6 @@ startCommand = "npx serve -s dist -l $PORT"
 [deploy]
 healthcheckPath = "/"
 healthcheckTimeout = 100
-restartPolicyType = "on_error"
-restartPolicyMaxRetries = 10
 
 [environment]
 PORT = "5173"
