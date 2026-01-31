@@ -9,3 +9,8 @@ healthcheckTimeout = 100
 
 [environment]
 PORT = "5173"
+NIXPACKS_pkgs = "nodejs-22"
+
+[nixpacks]
+plan = { providers = ["node"] }
+
