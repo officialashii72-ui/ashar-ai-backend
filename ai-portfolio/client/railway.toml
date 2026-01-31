@@ -1,14 +1,14 @@
 [build]
 builder = "nixpacks"
 buildCommand = "npm install && npm run build"
-startCommand = "npm start"
+startCommand = "npx serve -s dist -l $PORT"
 
 [deploy]
-healthcheckPath = "/api/health"
+healthcheckPath = "/"
 healthcheckTimeout = 100
 restartPolicyType = "on_error"
 restartPolicyMaxRetries = 10
 
 [environment]
-PORT = "3000"
+PORT = "5173"
 NODE_ENV = "production"
