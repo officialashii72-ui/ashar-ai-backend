@@ -27,6 +27,10 @@ app.get('/', (req, res) => {
     res.send('API is running...');
 });
 
+app.get('/api/health', (req, res) => {
+    res.status(200).json({ status: 'ok' });
+});
+
 app.use('/api/admin', authRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/api/services', serviceRoutes);
